@@ -37,47 +37,12 @@ When a user asks a question, a step-by-step process happens behind the scenes:
 4. **Analysis**: The AI processes the data, performs the logic (e.g., matching property owners to live search results).
 5. **Presentation**: It formats the final answer in plain English, generates data charts, and updates the interactive map.
 
-Here is a visual diagram of that workflow:
+Here is a simple breakdown of how the information flows:
 
-```mermaid
-graph TD
-    %% Define Styles
-    classDef user fill:#6366f1,stroke:#4f46e5,stroke-width:2px,color:#fff
-    classDef ui fill:#0891b2,stroke:#06b6d4,stroke-width:2px,color:#fff
-    classDef ai fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
-    classDef data fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
-
-    User(["👤 User Types a Question"]):::user
-    
-    subgraph Dashboard
-        UI["🖥️ AI Chat Interface"]:::ui
-        MapMap["🗺️ Interactive Map"]:::ui
-    end
-    
-    subgraph The AI Brain
-        Brain["🧠 AI Orchestrator<br/>(Understands Intent)"]:::ai
-    end
-
-    subgraph The Data Sources
-        CityData["🌍 City Property Records"]:::data
-        WebSearch["🔍 Live Web Search"]:::data
-        LegalDocs["📚 Zoning Code Books"]:::data
-    end
-
-    %% Flow
-    User --> UI
-    UI --> Brain
-    Brain -->|Needs Official Records| CityData
-    Brain -->|Needs Live Verification| WebSearch
-    Brain -->|Needs Policy Rules| LegalDocs
-    
-    CityData -.->|Returns Parcel Info| Brain
-    WebSearch -.->|Returns Web Results| Brain
-    LegalDocs -.->|Returns Rules| Brain
-    
-    Brain -->|Produces Text Answer| UI
-    Brain -->|Draws Map Pins & Zones| MapMap
-```
+- **The Dashboard**: The visual interface where the user types questions and views the interactive map.
+- **The AI Brain**: The intelligent system that reads the question, understands the goal, and decides what data is needed to answer it.
+- **The Data Sources**: The various databases (like city records, legal PDFs, and live Google searches) that the AI Brain consults to gather facts.
+- **The Result**: The AI combines all the facts, writes a simple summary for the user, and draws the necessary pins and colored zones on the map.
 
 ---
 
