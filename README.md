@@ -64,6 +64,10 @@ Ask natural language questions about the 1985 vs. 2026 Zoning Ordinances and Com
 ├── data_files/             # Knowledge base for Policy RAG
 │   ├── comp_plan.pdf       # 2020 Comprehensive Plan
 │   └── zoning.pdf          # Zoning Ordinances
+├── docs/                   # Documentation for Business & Setup
+│   ├── Project_Overview.md # High-level business overview
+│   ├── Project_Workflow.md # Step-by-step logic and data flow
+│   └── UI_User_Manual.md   # How to use the Streamlit application
 └── src/
     ├── agent/              # LangGraph Orchestration & Logic
     │   ├── graph.py        # Central State Machine & Fallback logic
