@@ -47,21 +47,21 @@ graph TD
     classDef ai fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
     classDef data fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
 
-    User([\uD83D\uDC64 User Types a Question]):::user
+    User(["👤 User Types a Question"]):::user
     
     subgraph Dashboard
-        UI[\uD83D\uDDA5\uFE0F AI Chat Interface]:::ui
-        MapMap[\uD83D\uDDFA\uFE0F Interactive Map]:::ui
+        UI["🖥️ AI Chat Interface"]:::ui
+        MapMap["🗺️ Interactive Map"]:::ui
     end
     
     subgraph The AI Brain
-        Brain[\uD83E\uDDE0 AI Orchestrator<br>(Understands Intent)]:::ai
+        Brain["🧠 AI Orchestrator<br/>(Understands Intent)"]:::ai
     end
 
     subgraph The Data Sources
-        CityData[\uD83C\uDF0D City Property Records]:::data
-        WebSearch[\uD83D\uDD0D Live Web Search]:::data
-        LegalDocs[\uD83D\uDCDA Zoning Code Books]:::data
+        CityData["🌍 City Property Records"]:::data
+        WebSearch["🔍 Live Web Search"]:::data
+        LegalDocs["📚 Zoning Code Books"]:::data
     end
 
     %% Flow
