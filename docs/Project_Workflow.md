@@ -66,6 +66,3 @@ Before the final message is shown to the user, the Streamlit dashboard intercept
 **The Output**
 1. **The Chat Feed**: The user receives a clean, professional written summary of the findings (e.g., "I found 8 ghost businesses in downtown..."). No broken code or messy data is visible in the chat.
 2. **The Living Map**: Simultaneously, the extracted JSON data is sent to the Folium map engine. The interactive map instantaneously updates, dropping animated pins or drawing colored zones exactly where the AI targeted them.
-
----
-*End of Workflow*
